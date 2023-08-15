@@ -2,7 +2,7 @@
 
 #include <TlHelp32.h>
 
-Memory::Memory(const char* name)
+Memory::Memory(const char* name) noexcept
 {
 	HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 
