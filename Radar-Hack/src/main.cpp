@@ -16,7 +16,13 @@ namespace offsets
 int main()
 {
 	Memory mem { "csgo.exe" };
+	std::cout << "[+] Process ID -> " << mem.getProcessId() << '\n';
+
 	const auto client = mem.getModuleAddress("client.dll");
+	std::cout << "[+] Client Dll -> 0x" << std::hex << client << std::dec << '\n';
+
+	std::cout << "--------------------------------------------" << '\n';
+	std::cout << "~ Starting The Cheat..." << '\n';
 
 	// main hack loop
 	while (true)
